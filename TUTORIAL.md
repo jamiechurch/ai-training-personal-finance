@@ -35,7 +35,7 @@ git clone https://github.com/YOUR-USERNAME/AI-Training-Personal-Finance.git
 cd "AI Training Personal Finance"
 ```
 
-**Note:** Sample data is optional for learning. You can use your own financial documents, or see [DATA.md](DATA.md) to download practice data.
+The repository includes sample financial data in the `data/` folder - you're ready to go!
 
 ### Run Your First Analysis (12 minutes)
 
@@ -60,7 +60,7 @@ claude
 
 ### What Just Happened?
 
-You just used **3 AI agents** to analyze 75 financial documents in under a minute:
+You just used **3 AI agents** to analyze financial documents in under a minute:
 
 1. **Spending Analyzer** - Categorized every expense across 3 months
 2. **Cash Flow Analyst** - Identified months with tight cash flow
@@ -572,7 +572,12 @@ ls .claude/agents
 
 Should see 8 `.md` files (the agents)
 
-**Optional:** Want sample data for practice? See [DATA.md](DATA.md) for download instructions. You can also use your own financial documents in the `data/` folder.
+Check sample data:
+```bash
+ls data
+```
+
+Should see folders like `checking`, `savings`, `investments`, `taxes` with PDF files inside.
 
 **5. Start Analyzing**
 
@@ -605,9 +610,9 @@ Run your first agent:
 - Or: `cd %USERPROFILE%\Documents\"AI Training Personal Finance"` (Windows)
 
 **"Cannot read PDF files"**
-- You need financial documents to analyze
-- Use your own PDFs in the `data/` folder, OR
-- Download sample data - see [DATA.md](DATA.md) for instructions
+- Sample data is included in the `data/` folder
+- Verify files exist: `ls data/` or check subdirectories
+- You can also add your own PDFs to the `data/` folder
 
 **"Permission denied"**
 - Mac: Grant Terminal permissions in System Preferences > Security & Privacy
@@ -620,11 +625,12 @@ Run your first agent:
 **Documentation:**
 - Claude Code Docs: https://claude.ai/code/docs
 - Agent Definitions: `.claude/agents/` directory
-- Sample Data: See [DATA.md](DATA.md) for optional download
+- Sample Data Details: [DATA.md](DATA.md)
 
 **Project Files:**
 - Agent definitions: `.claude/agents/*.md`
-- Your financial data: Add to `data/` folder (or download samples)
+- Sample financial data: `data/` folder (included)
+- Add your own data: Place PDFs in `data/` folder
 
 **Next Steps:**
 1. Complete the main exercise (Part 3)
@@ -637,14 +643,15 @@ Run your first agent:
 
 ## About the Data
 
+**Sample Data Included:**
+This repository includes sample financial data ready to analyze:
+- 27 realistic financial documents in the `data/` folder
+- Includes checking, savings, retirement statements, and tax documents
+- Entirely fictional "Bob & Jane Doe" data created for educational purposes
+- See [DATA.md](DATA.md) for complete details
+
 **Using Your Own Data:**
 The agents work with any financial PDFs - bank statements, credit card statements, tax returns, utility bills, etc. Simply add your documents to the `data/` folder and start analyzing.
-
-**Optional Sample Data:**
-Want to practice first? See [DATA.md](DATA.md) to download the "Bob & Jane Doe" sample dataset:
-- 75 realistic financial documents covering a full year
-- Entirely fictional and generated for educational purposes
-- Great for learning before analyzing your own finances
 
 ---
 

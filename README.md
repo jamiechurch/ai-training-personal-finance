@@ -27,7 +27,7 @@ cd "AI Training Personal Finance"
 claude
 ```
 
-**Optional:** Want sample data to practice with? See [DATA.md](DATA.md) for download instructions.
+Sample financial data is already included in the `data/` folder - you're ready to go!
 
 ### Step 3: Run Your First Analysis
 ```
@@ -47,7 +47,7 @@ This project includes **4 powerful AI agents** that analyze personal finance dat
 3. **Budget Monitor** - Evaluates against the 50/30/20 rule
 4. **Retirement Analyzer** - Analyzes 401(k)/403(b) performance
 
-Each agent reads real financial documents (75 PDFs) and provides instant insights that would take hours manually.
+Each agent reads real financial documents (27 sample PDFs included) and provides instant insights that would take hours manually.
 
 → **[Try the full tutorial](TUTORIAL.md)** to learn all four agents
 
@@ -111,25 +111,26 @@ Notable Patterns:
 - Make sure you typed `@agent-name` with the `@` symbol
 
 ### "Cannot read PDF files"
-- You need financial documents to analyze
-- Use your own PDFs in the `data/` folder, OR
-- Download sample data - see [DATA.md](DATA.md) for instructions
+- Sample data is already included in the `data/` folder
+- Verify files exist: `ls data/` (Mac) or `dir data\` (Windows)
+- You can also use your own PDFs in the `data/` folder
 
 → **More help?** See [TUTORIAL.md - Advanced Topics](TUTORIAL.md#part-5-advanced-topics)
 
 ---
 
-## 📦 Using Your Own Data or Sample Data
+## 📦 Sample Data Included
 
-**Want to try it with your own financial documents?**
-- Add your PDFs to the `data/` folder and start analyzing immediately
+**Sample data is already included!**
+- 27 realistic financial documents in the `data/` folder
+- Ready to analyze immediately after cloning
+- Includes checking, savings, retirement statements, and tax documents
+- All data is fictional and created for educational purposes
 
-**Want to practice with sample data first?**
-- See [DATA.md](DATA.md) for optional download of "Bob & Jane Doe" sample dataset
-- 75 realistic financial documents (statements, tax returns, utility bills)
-- Entirely fictional and generated for educational purposes
-
-The agents work with any financial documents - use whatever fits your learning style.
+**Want to use your own data?**
+- Simply add your PDFs to the `data/` folder and start analyzing
+- The agents work with any financial documents
+- See [DATA.md](DATA.md) for details about the sample data structure
 
 ---
 
@@ -137,7 +138,7 @@ The agents work with any financial documents - use whatever fits your learning s
 
 - **Real-world ready**: Actually useful analysis, not toy examples
 - **No programming**: Create powerful tools with plain English
-- **Complete dataset**: 75 realistic documents to practice with
+- **Sample data included**: 27 realistic documents ready to analyze
 - **Teaching-focused**: Designed for workshops and demonstrations
 - **4 ready-to-use agents**: Demonstrates variety of practical use cases
 
