@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data - reference external repo instead of committing large PDFs
+data/bobandjanedoe/statements/**/*.pdf
+data/bobandjanedoe/.git/
+
+# Temporary files
+*.log
+*.tmp
+temp/
