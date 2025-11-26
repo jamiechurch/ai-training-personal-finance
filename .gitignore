@@ -22,8 +22,8 @@ Thumbs.db
 *.swp
 *.swo
 
-# Data - exclude all data files
-data/
+# Data - only ignore .DS_Store in data folder
+data/.DS_Store
 
 # Temporary files
 *.log
