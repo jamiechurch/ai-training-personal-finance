@@ -17,14 +17,14 @@ This tutorial demonstrates the power of Claude Code with custom agents for finan
 AI Training Personal Finance/
 ├── .claude/
 │   └── agents/              # Custom agent definitions (8 specialized agents)
-│       ├── financial-auditor.md
-│       ├── spending-analyzer.md
-│       ├── tax-verifier.md
-│       ├── retirement-analyzer.md
-│       ├── budget-monitor.md
-│       ├── cashflow-analyst.md
-│       ├── document-checker.md
-│       └── savings-tracker.md
+│       ├── spending-analyzer.md      # ⭐ Core: Tutorial Exercise 1
+│       ├── cashflow-analyst.md       # ⭐ Core: Tutorial Exercise 2
+│       ├── budget-monitor.md         # ⭐ Core: Tutorial Exercise 3
+│       ├── retirement-analyzer.md    # ⭐ Core: Tutorial Exercise 4
+│       ├── tax-verifier.md           # ⭐ Optional: Tax verification
+│       ├── document-checker.md       # Additional agent
+│       ├── financial-auditor.md      # Additional agent
+│       └── savings-tracker.md        # Additional agent
 ├── data/
 │   └── bobandjanedoe/       # Sample financial data (75 PDFs)
 │       ├── statements/
@@ -79,30 +79,13 @@ An agent is a specialized AI assistant with:
 - **Efficiency**: No need to re-explain context
 - **Scalability**: Create once, use many times
 
-## Part 2: The 8 Financial Analysis Agents
+## Part 2: The Financial Analysis Agents
 
-### Agent 1: Document Completeness Checker
-**Purpose**: Verify all financial documents are present and accounted for
+This project includes 8 specialized financial agents, though the tutorial focuses on the 4 most practical agents for everyday financial analysis, plus 1 optional agent for tax verification.
 
-**Use Cases**:
-- Before starting analysis, ensure no files are missing
-- Audit file organization
-- Verify data completeness after generating new documents
+### Core Tutorial Agents
 
-**Expected Output**: List of all files with confirmation of completeness
-
-### Agent 2: Financial Auditor
-**Purpose**: Cross-reference transactions and verify mathematical accuracy
-
-**Use Cases**:
-- Ensure utility bills match bank statement charges
-- Verify running balances are calculated correctly
-- Catch data generation errors
-- Validate consistency across documents
-
-**Expected Output**: Detailed audit report with any discrepancies highlighted
-
-### Agent 3: Spending Pattern Analyzer
+#### Agent 1: Spending Pattern Analyzer
 **Purpose**: Understand where money is being spent
 
 **Use Cases**:
@@ -113,7 +96,7 @@ An agent is a specialized AI assistant with:
 
 **Expected Output**: Comprehensive spending report with categorized expenses
 
-### Agent 4: Cash Flow Analyst
+#### Agent 2: Cash Flow Analyst
 **Purpose**: Track money in vs. money out
 
 **Use Cases**:
@@ -124,7 +107,7 @@ An agent is a specialized AI assistant with:
 
 **Expected Output**: Month-by-month cash flow analysis with balance trends
 
-### Agent 5: Budget Compliance Monitor
+#### Agent 3: Budget Compliance Monitor
 **Purpose**: Compare spending to budgeting best practices
 
 **Use Cases**:
@@ -135,18 +118,7 @@ An agent is a specialized AI assistant with:
 
 **Expected Output**: Budget compliance report with recommendations
 
-### Agent 6: Savings Goal Tracker
-**Purpose**: Monitor savings progress and growth
-
-**Use Cases**:
-- Calculate total interest earned
-- Verify monthly transfer goals are met
-- Project future savings growth
-- Assess savings rate vs. income
-
-**Expected Output**: Savings progress report with future projections
-
-### Agent 7: Retirement Account Analyzer
+#### Agent 4: Retirement Account Analyzer
 **Purpose**: Evaluate retirement savings performance
 
 **Use Cases**:
@@ -157,7 +129,9 @@ An agent is a specialized AI assistant with:
 
 **Expected Output**: Comprehensive retirement analysis with projections
 
-### Agent 8: Tax Document Verifier
+### Optional Agent
+
+#### Tax Document Verifier
 **Purpose**: Verify tax return accuracy
 
 **Use Cases**:
@@ -168,55 +142,22 @@ An agent is a specialized AI assistant with:
 
 **Expected Output**: Tax verification report with any errors identified
 
+**Note**: This agent is covered as an optional exercise in Part 3. It's most useful during tax season (January-April).
+
+### Additional Agents Available
+
+The project also includes three additional specialized agents not covered in the main tutorial:
+- **Document Completeness Checker**: Verifies all financial documents are present
+- **Financial Auditor**: Cross-references transactions and verifies mathematical accuracy
+- **Savings Goal Tracker**: Monitors savings progress and growth
+
+These agents are available for advanced users and can be explored after completing the core tutorial exercises.
+
 ## Part 3: Step-by-Step Tutorial
 
-### Exercise 1: Document Verification
+This tutorial includes **4 core exercises** that demonstrate the most practical applications of financial analysis agents, plus **1 optional exercise** for advanced tax verification. Each exercise builds upon financial analysis skills and showcases different agent capabilities.
 
-**Objective**: Verify all 75 financial documents are present
-
-**Steps**:
-
-1. Open Claude Code in this directory
-2. Type: `@document-checker verify all files`
-3. Review the output
-
-**Expected Result**:
-```
-✓ 12 checking statements (Jan-Dec 2024)
-✓ 12 savings statements (Jan-Dec 2024)
-✓ 2 retirement statements (401k, 403b)
-✓ 1 tax return (2023 Form 1040)
-✓ 48 utility bills (electric, gas, water, internet)
-Total: 75 files - All present and accounted for
-```
-
-**Learning Points**:
-- Agents can quickly inventory large document sets
-- Automated verification catches missing files
-- Establishes baseline before deeper analysis
-
-### Exercise 2: Financial Audit
-
-**Objective**: Verify the accuracy of January 2024 statements
-
-**Steps**:
-
-1. Type: `@financial-auditor audit January 2024 statements`
-2. Wait for the agent to analyze checking, savings, and utility bills
-3. Review findings
-
-**Expected Result**:
-- Confirmation that utility bills match bank charges
-- Verification of running balance calculations
-- Cross-reference of savings transfer in both accounts
-- Interest calculation verification
-
-**Learning Points**:
-- Agents can cross-reference multiple documents
-- Catches mathematical errors humans might miss
-- Essential for data quality assurance
-
-### Exercise 3: Spending Analysis
+### Exercise 1: Spending Analysis
 
 **Objective**: Understand spending patterns for Q1 2024
 
@@ -246,7 +187,7 @@ Jane's gambling represents 13.1% of net income ($2,100 / $16,000)
 - Can calculate percentages and ratios
 - Interactive follow-up questions provide deeper insights
 
-### Exercise 4: Cash Flow Analysis
+### Exercise 2: Cash Flow Analysis
 
 **Objective**: Identify months with the lowest account balances
 
@@ -267,7 +208,7 @@ Jane's gambling represents 13.1% of net income ($2,100 / $16,000)
 - Bi-monthly pay can create cash flow challenges
 - Proactive analysis prevents overdrafts
 
-### Exercise 5: Budget Compliance
+### Exercise 3: Budget Compliance
 
 **Objective**: Evaluate budget health using the 50/30/20 rule
 
@@ -305,40 +246,7 @@ or reducing transportation costs. Gambling expenses are concerning.
 - Visual feedback (✓/❌) makes issues clear
 - Prioritized recommendations guide action
 
-### Exercise 6: Savings Progress
-
-**Objective**: Track savings growth and interest earned in 2024
-
-**Steps**:
-
-1. Type: `@savings-tracker calculate total interest earned in 2024`
-2. Review the monthly progression
-3. Ask: "Project savings balance for next 3 years"
-
-**Expected Result**:
-```
-2024 Savings Summary:
-Starting Balance: $8,500
-Ending Balance: $14,250
-Total Contributions: $6,000 (12 × $500)
-Total Interest: ~$450
-Effective APY: 4.25%
-
-Projections (assuming same contribution rate):
-2025: $20,850
-2026: $27,600
-2027: $34,500
-
-Current savings rate: 3.75% of gross income
-Recommended: 15-20%
-```
-
-**Learning Points**:
-- Agents track progress over time
-- Can project future based on current patterns
-- Compares actual vs. recommended savings rates
-
-### Exercise 7: Retirement Analysis
+### Exercise 4: Retirement Analysis
 
 **Objective**: Compare Bob's 401(k) and Jane's 403(b) performance
 
@@ -385,7 +293,11 @@ Assumes 7% average annual return and current contribution levels.
 - Calculates returns and projects future values
 - Provides actionable retirement planning insights
 
-### Exercise 8: Tax Verification
+---
+
+### Optional Exercise: Tax Verification
+
+**When to Use This**: This exercise is most valuable during tax preparation season (January-April) or when you need to verify the accuracy of a filed tax return. Skip this exercise if you're learning the basics or if tax season is not relevant to your current needs.
 
 **Objective**: Verify 2023 tax return accuracy
 
@@ -414,6 +326,7 @@ All calculations verified. Tax return appears accurate.
 - Agents can verify complex tax calculations
 - Cross-references multiple data sources
 - Provides confidence in tax filing accuracy
+- Particularly useful for double-checking tax preparation software or professional returns
 
 ## Part 4: Advanced Workflows
 
@@ -422,10 +335,9 @@ All calculations verified. Tax return appears accurate.
 **Goal**: Complete financial health check for a specific month
 
 ```
-1. @document-checker verify [month] files present
-2. @financial-auditor audit [month] for errors
-3. @spending-analyzer breakdown [month] spending
-4. @cashflow-analyst review [month] cash flow
+1. @spending-analyzer breakdown [month] spending
+2. @cashflow-analyst review [month] cash flow
+3. @budget-monitor evaluate [month] budget compliance
 ```
 
 **Use Case**: Monthly routine to stay on top of finances
@@ -435,12 +347,11 @@ All calculations verified. Tax return appears accurate.
 **Goal**: Year-end comprehensive financial analysis
 
 ```
-1. @document-checker verify all 2024 files
-2. @spending-analyzer analyze entire year spending trends
-3. @budget-monitor evaluate full year against budget
-4. @savings-tracker calculate year-end savings progress
-5. @retirement-analyzer review retirement account performance
-6. @tax-verifier prepare for tax season
+1. @spending-analyzer analyze entire year spending trends
+2. @budget-monitor evaluate full year against budget
+3. @cashflow-analyst identify cash flow patterns throughout the year
+4. @retirement-analyzer review retirement account performance
+5. @tax-verifier prepare for tax season (optional)
 ```
 
 **Use Case**: Annual review for tax prep and financial planning
@@ -452,8 +363,7 @@ All calculations verified. Tax return appears accurate.
 ```
 1. @cashflow-analyst identify March cash flow issues
 2. @spending-analyzer show March spending anomalies
-3. @financial-auditor verify March calculations
-4. Follow-up questions to drill down
+3. Follow-up questions to drill down
 ```
 
 **Use Case**: Ad-hoc investigation of financial concerns
@@ -465,7 +375,7 @@ All calculations verified. Tax return appears accurate.
 ```
 1. @budget-monitor current spending baseline
 2. @cashflow-analyst identify available cash
-3. @savings-tracker project savings growth
+3. @spending-analyzer understand current spending patterns
 4. @retirement-analyzer ensure retirement on track
 5. Calculate affordability of new expense
 ```
@@ -530,12 +440,12 @@ You are a [role/specialty]. [Primary objective]:
 - Why use AI for financial analysis?
 
 **Part 2: Demo (30 min)**
-- Live demonstration of document-checker
 - Live demonstration of spending-analyzer
+- Live demonstration of cashflow-analyst
 - Show the power of instant insights
 
 **Part 3: Hands-On (60 min)**
-- Participants run exercises 1-4
+- Participants run exercises 1-3 (Spending, Cash Flow, Budget)
 - Guide them through agent invocation
 - Help with questions
 
@@ -651,7 +561,7 @@ You now have a complete framework for demonstrating Claude Code and agents using
 **Ready to get started? Try this:**
 
 ```
-@document-checker verify all files are present
+@spending-analyzer analyze Q1 2024 spending patterns
 ```
 
 Welcome to the future of AI-assisted analysis!
