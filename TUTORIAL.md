@@ -56,6 +56,522 @@ This project uses a complete set of fictional financial documents for a married 
 - Basic understanding of personal finance concepts
 - No programming knowledge required!
 
+## Setup Instructions for Beginners
+
+If you've never used a command line or terminal before, don't worry! This section will walk you through everything step by step. Think of the command line as a way to talk directly to your computer using text commands instead of clicking buttons.
+
+### What You Need to Install
+
+Before you start, you'll need to install a few free tools on your computer. We'll guide you through each one.
+
+#### 1. Install Claude Code
+
+**Claude Code** is the AI assistant tool you'll use for financial analysis.
+
+**For Mac Users:**
+1. Open your web browser and go to: https://claude.ai/code
+2. Click the download button for macOS
+3. Once downloaded, open the downloaded file
+4. Follow the installation prompts
+5. When complete, you may need to restart your Terminal
+
+**For Windows Users:**
+1. Open your web browser and go to: https://claude.ai/code
+2. Click the download button for Windows
+3. Once downloaded, run the installer
+4. Follow the installation prompts
+5. When complete, you may need to restart your Command Prompt or PowerShell
+
+**Verifying Installation:**
+After installing, we'll verify it works in the "How to Verify Installations" section below.
+
+Note: Claude Code is the main tool you'll use throughout this tutorial. Make sure to complete this installation before proceeding.
+
+#### 2. Install Git
+
+**Git** is a tool that helps you download and manage project files. Think of it as a specialized download manager for code projects.
+
+Tip: Git is free, open-source, and widely used in the tech industry. It's safe to install.
+
+**For Mac Users:**
+1. Open your web browser and go to: https://git-scm.com/download/mac
+2. Download the installer for macOS
+3. Open the downloaded file and follow the installation prompts
+4. Accept all the default settings (just click "Continue" and "Install")
+
+Note: Mac may already have Git installed. We'll check this in the verification section.
+
+**For Windows Users:**
+1. Open your web browser and go to: https://git-scm.com/download/windows
+2. The download should start automatically
+3. Run the installer
+4. Accept all the default settings (just click "Next" through all the screens)
+5. Complete the installation
+
+#### 3. How to Verify Installations
+
+Let's make sure everything installed correctly. We'll need to use the command line for this.
+
+**Opening Your Command Line:**
+
+**On Mac:**
+1. Click on **Finder** (the smiling face icon in your dock)
+2. Click **Applications** on the left sidebar
+3. Scroll down and open the **Utilities** folder
+4. Double-click **Terminal**
+5. A window with a black or white background and some text will appear
+
+Tip: You can also press **Command + Space** to open Spotlight Search, type "Terminal", and press Enter.
+
+**On Windows:**
+1. Click the **Start** button (Windows logo in the bottom-left)
+2. Type **cmd** or **PowerShell**
+3. Click on **Command Prompt** or **PowerShell** that appears
+4. A window with a black background and white text will appear
+
+**Verify Git is installed:**
+In your command line window, type this exactly and press Enter:
+
+Mac/Windows:
+```
+git --version
+```
+
+Success: You should see something like `git version 2.39.0` (the numbers might be different).
+
+Warning: If you see an error like "command not found" or "is not recognized": Git is not installed correctly. Go back to the installation steps above.
+
+**Verify Claude Code is installed:**
+In your command line window, type:
+
+Mac/Windows:
+```
+claude --version
+```
+
+Success: You should see a version number for Claude Code like `claude v1.5.0` or similar.
+
+Warning: If you see "command not found" or an error: Claude Code is not installed correctly. Go back to the installation steps above.
+
+Tip: If you just installed these tools, you may need to close and reopen your Terminal/PowerShell window for the commands to work.
+
+### Opening the Terminal/Command Line
+
+You'll use the command line to run the financial analysis agents. Here's how to open it each time you need it:
+
+**For Mac Users:**
+1. **Applications > Utilities > Terminal**, OR
+2. Press **Command + Space**, type "Terminal", press **Enter**
+
+What you'll see: A window with text that looks something like:
+```
+YourName@YourComputer ~ %
+```
+
+**For Windows Users:**
+1. Click **Start**, type **PowerShell**, press **Enter**, OR
+2. Right-click **Start** and select **Windows PowerShell**
+
+What you'll see: A window with text that looks something like:
+```
+PS C:\Users\YourName>
+```
+
+Tip: Keep this window open while you work on this project. If you close it, you'll need to navigate back to your project folder (we'll cover that next).
+
+### Basic Command Line Primer
+
+Think of your command line as a way to navigate through folders on your computer using text commands. Here are the essential commands you'll need:
+
+#### Navigating Folders (Directories)
+
+**The `cd` command** (stands for "change directory") moves you between folders.
+
+Mac/Windows:
+```
+cd Documents
+```
+This moves you into your Documents folder.
+
+To go into a folder inside your current location:
+```
+cd FolderName
+```
+
+To go up one level (back to the parent folder):
+```
+cd ..
+```
+
+Tip: Folder and file names are case-sensitive on Mac. "Documents" is different from "documents".
+
+#### Seeing Where You Are
+
+**On Mac:** Use the `pwd` command (stands for "print working directory")
+```
+pwd
+```
+This shows your current location, like: `/Users/YourName/Documents`
+
+**On Windows:** Just type `cd` with no other text
+```
+cd
+```
+This shows your current location, like: `C:\Users\YourName\Documents`
+
+#### Listing Files and Folders
+
+**On Mac:** Use the `ls` command (stands for "list")
+```
+ls
+```
+This shows all files and folders in your current location.
+
+**On Windows:** Use the `dir` command (stands for "directory")
+```
+dir
+```
+This shows all files and folders in your current location.
+
+Tip: Use this to verify you're in the right place before running commands.
+
+#### Copy and Paste in Terminal
+
+**On Mac:**
+- **Copy:** Select text with your mouse, then press **Command + C**
+- **Paste:** Press **Command + V**
+
+**On Windows (Command Prompt):**
+- **Copy:** Select text with your mouse, then press **Enter** (yes, just Enter!)
+- **Paste:** Right-click in the window
+
+**On Windows (PowerShell):**
+- **Copy:** Select text with your mouse, then press **Ctrl + C**
+- **Paste:** Right-click in the window OR press **Ctrl + V**
+
+Tip: When copying commands from this guide, paste them exactly as shown. Don't add extra spaces or change the formatting.
+
+### Step-by-Step Project Setup
+
+Now let's download this project and get it ready to use. Follow these steps carefully.
+
+#### Step 1: Decide Where to Put the Project
+
+You need to choose where on your computer to store this project. We recommend your Documents folder.
+
+**Navigate to your Documents folder:**
+
+On Mac:
+```
+cd ~/Documents
+```
+
+On Windows:
+```
+cd %USERPROFILE%\Documents
+```
+
+Success: You're now in your Documents folder.
+
+Tip: The `~` symbol on Mac and `%USERPROFILE%` on Windows are shortcuts that mean "my home folder".
+
+#### Step 2: Download (Clone) the Project
+
+Note: This step assumes your project is on GitHub. If you're setting this up from a different location, you'll need the Git URL for this repository.
+
+Type this command (replace `YOUR-GITHUB-USERNAME` with the actual GitHub username where this project is stored):
+
+```
+git clone https://github.com/YOUR-GITHUB-USERNAME/AI-Training-Personal-Finance.git
+```
+
+What happens: Git downloads all the project files into a new folder called "AI-Training-Personal-Finance" (or whatever the repository is named).
+
+Success: You should see messages about "Cloning into..." and progress indicators. When it's done, you'll see your command prompt again.
+
+Tip: The download might take 1-2 minutes depending on your internet connection. This is normal because we're downloading 75 PDF files.
+
+Note: If this project isn't on GitHub yet, you may need to download it as a ZIP file and extract it to your Documents folder instead. Ask the person who shared this project with you for the correct download method.
+
+Warning: Make sure you have a stable internet connection before running this command. If the download is interrupted, you may need to delete the partially downloaded folder and try again.
+
+#### Step 3: Navigate Into the Project Folder
+
+Now move into the project folder you just downloaded:
+
+On Mac:
+```
+cd AI\ Training\ Personal\ Finance
+```
+Note: The backslashes (`\`) are needed before each space in the folder name.
+
+On Windows:
+```
+cd "AI Training Personal Finance"
+```
+Note: The quotes are needed because the folder name has spaces.
+
+Success: Your command prompt should now show you're inside this folder.
+
+Verify you're in the right place:
+
+On Mac:
+```
+pwd
+```
+You should see something like: `/Users/YourName/Documents/AI Training Personal Finance`
+
+On Windows:
+```
+cd
+```
+You should see something like: `C:\Users\YourName\Documents\AI Training Personal Finance`
+
+#### Step 4: Verify the Project Files
+
+Let's make sure all the files downloaded correctly.
+
+On Mac:
+```
+ls
+```
+
+On Windows:
+```
+dir
+```
+
+Success: You should see several items including:
+- `.claude` (this is a hidden folder containing the AI agents)
+- `data` (folder with financial documents)
+- `TUTORIAL.md` (this file!)
+- `README.md`
+- `docs` (additional documentation)
+- `examples` (example outputs)
+
+Tip: If you don't see `.claude` on Mac, it's because it's a hidden folder (starts with a dot). That's normal and expected. You can see it with: `ls -a`
+
+Note: Windows users might see `.claude` or might not, depending on your folder view settings. Either way is fine.
+
+#### Step 5: Initialize Submodules (If Applicable)
+
+Note: This step is only needed if the project uses Git submodules. Skip this if you're unsure.
+
+If the project requires submodules, run:
+
+```
+git submodule update --init --recursive
+```
+
+What this does: Some projects include links to other projects. This command downloads those linked projects.
+
+Success: You'll see download progress, or a message saying the submodules are already up to date.
+
+#### Step 6: Verify Setup Was Successful
+
+Let's make sure everything is ready. Type:
+
+```
+ls .claude/agents
+```
+(Mac and Windows both use `ls` for this)
+
+Success: You should see a list of agent files like:
+- `spending-analyzer.md`
+- `cashflow-analyst.md`
+- `budget-monitor.md`
+- `retirement-analyzer.md`
+- `tax-verifier.md`
+- `document-checker.md`
+- `financial-auditor.md`
+- `savings-tracker.md`
+
+Success: If you see 8 agent files (all ending in `.md`), your setup is complete! You're ready to run your first agent.
+
+Warning: If you don't see these files or get an error: Make sure you're in the correct directory. Go back to Step 3 and verify you navigated into the project folder.
+
+Tip: These `.md` files are just text files written in Markdown format. They contain the instructions that tell each agent what to do.
+
+### Running Your First Agent
+
+Congratulations! You're now ready to use Claude Code with the financial analysis agents.
+
+#### Step 1: Make Sure You're in the Right Directory
+
+Before running any agent, always verify you're in the project directory.
+
+On Mac:
+```
+pwd
+```
+Should show: `/Users/YourName/Documents/AI Training Personal Finance` (or wherever you put it)
+
+On Windows:
+```
+cd
+```
+Should show: `C:\Users\YourName\Documents\AI Training Personal Finance` (or wherever you put it)
+
+If you're not in the right place: Navigate back to the project folder using `cd` (see Step 3 above).
+
+#### Step 2: Start Claude Code
+
+To start Claude Code in the project directory, type:
+
+```
+claude
+```
+
+What happens: Claude Code will start and you'll enter an interactive session. You'll see a welcome message and a prompt where you can type.
+
+Success: You'll see something like:
+```
+Claude Code v1.x.x
+Type /help for available commands
+>
+```
+
+Tip: The `>` symbol is the prompt where you type your commands. Think of it like the cursor in a chat window.
+
+Note: To exit Claude Code later, you can type `/exit` or press **Ctrl+C** (on both Mac and Windows).
+
+#### Step 3: Run Your First Analysis
+
+Now you can invoke an agent! At the Claude Code prompt (the `>` symbol), type exactly:
+
+```
+@spending-analyzer analyze January 2024
+```
+
+What this does: This tells the Spending Pattern Analyzer agent to look at all the financial documents for January 2024 and break down where money was spent.
+
+Tip: Make sure to include the `@` symbol before the agent name. This is how Claude Code knows you want to use an agent.
+
+Note: You can copy and paste this command from this tutorial into Claude Code. Just make sure not to include the backticks (```) at the beginning and end.
+
+#### Step 4: What to Expect
+
+**Processing Time:** The agent will take 10-30 seconds to:
+1. Read the January 2024 bank statements
+2. Analyze all transactions
+3. Categorize spending
+4. Calculate totals
+5. Generate insights
+
+**Expected Output:** You should see a detailed report like:
+
+```
+January 2024 Spending Analysis:
+
+Housing: $2,215.00 (mortgage payment)
+Transportation: $889.00 (vehicle payments, insurance, gas)
+Gambling: $700.00 (DraftKings transactions)
+Groceries: $715.00
+Utilities: $298.00
+Dining Out: $319.00
+[... more categories ...]
+
+Total Spending: $5,956.00
+Total Income: $9,671.64
+Savings: $3,715.64
+
+Notable Patterns:
+- Gambling expenses occur weekly
+- Grocery spending is consistent
+- Large mortgage payment on the 1st
+```
+
+Success: If you see output like this, congratulations! You've successfully run your first AI agent analysis!
+
+Tip: The agent reads the actual PDF files and extracts the transaction data. This is real analysis, not pre-canned responses!
+
+#### Step 5: Ask Follow-up Questions
+
+You can continue the conversation with the agent. Try asking:
+
+```
+What percentage of income goes to gambling?
+```
+
+or
+
+```
+How does January compare to other months?
+```
+
+The agent will analyze further and provide more insights.
+
+Tip: You don't need to type `@spending-analyzer` again for follow-up questions. The agent stays active in the conversation.
+
+Note: To switch to a different agent, just type `@` followed by a different agent name, like `@cashflow-analyst`.
+
+### Troubleshooting
+
+#### Problem: "Command not found" when typing `claude`
+
+**Solution:**
+- Make sure Claude Code is installed (see "What You Need to Install" above)
+- Try closing and reopening your terminal/command line window
+- On Mac, you may need to restart Terminal
+- On Windows, you may need to restart Command Prompt or PowerShell
+
+#### Problem: "Agent not found" when typing `@spending-analyzer`
+
+**Solution:**
+- Verify you're in the correct project directory (use `pwd` on Mac or `cd` on Windows)
+- Check that the `.claude/agents` folder exists: type `ls .claude/agents`
+- Make sure you typed the agent name correctly (it's case-sensitive)
+
+#### Problem: "No such file or directory" errors
+
+**Solution:**
+- Verify the project downloaded completely (see Step 2: Download the Project)
+- Check you're in the project folder (not in Documents or another folder)
+- Try listing files with `ls` (Mac) or `dir` (Windows) to see what's in your current location
+
+#### Problem: The agent says "Cannot find January 2024 data"
+
+**Solution:**
+- Verify the data files exist: type `ls data/bobandjanedoe/statements/checking/`
+- You should see files like `checking_2024_01.pdf`
+- If files are missing, the download may have been incomplete. Try downloading the project again.
+
+#### Problem: "Permission denied" errors
+
+**On Mac:**
+- You may need to give Terminal permission to access certain folders
+- Go to **System Preferences > Security & Privacy > Privacy > Files and Folders**
+- Make sure Terminal has the necessary permissions
+
+**On Windows:**
+- You may need to run PowerShell or Command Prompt as Administrator
+- Right-click on PowerShell/Command Prompt and select "Run as Administrator"
+
+#### Problem: Terminal/Command Prompt closes immediately
+
+**Solution:**
+- You may have typed `exit` by accident
+- Simply open a new terminal/command line window
+- Navigate back to the project folder (see Step 3: Navigate Into the Project Folder)
+
+#### Still Having Issues?
+
+Note: Make sure you:
+1. Completed all installation steps
+2. Are in the correct project directory
+3. Typed commands exactly as shown (watch for spaces and spelling)
+
+Tip: When asking for help, include:
+- Your operating system (Mac or Windows)
+- The exact error message you're seeing
+- What command you typed that caused the error
+
+### Ready to Learn More?
+
+Success: Now that you've completed the setup and run your first agent, you're ready to continue with the tutorial!
+
+Continue to **Part 1: Understanding Agents in Claude Code** below to learn more about how agents work and try more advanced analyses.
+
 ## Part 1: Understanding Agents in Claude Code
 
 ### What is an Agent?

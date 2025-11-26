@@ -24,26 +24,135 @@ Analyzes a complete set of fictional financial documents (75 PDFs) using 8 speci
 - [Claude Code](https://claude.ai/code) installed
 - This repository cloned to your machine
 
+Note: If you're new to command line tools, see the **First Time Setup** section below before starting the 5-Minute Demo.
+
+### First Time Setup
+
+If this is your first time using Claude Code or working with command line tools, follow these steps:
+
+#### 1. Install Required Software
+
+**Claude Code:**
+- Mac: Download from https://claude.ai/code and follow installer
+- Windows: Download from https://claude.ai/code and run installer
+
+**Git (for downloading this project):**
+- Mac: Download from https://git-scm.com/download/mac
+- Windows: Download from https://git-scm.com/download/windows
+
+Tip: After installation, close and reopen your Terminal (Mac) or Command Prompt/PowerShell (Windows).
+
+#### 2. Open Your Command Line
+
+**Mac Users:**
+- Open **Terminal**: Go to Applications > Utilities > Terminal
+- Or press **Command + Space**, type "Terminal", press Enter
+
+**Windows Users:**
+- Open **PowerShell**: Click Start, type "PowerShell", press Enter
+- Or right-click Start and select "Windows PowerShell"
+
+#### 3. Download This Project
+
+Navigate to where you want to store the project (we recommend Documents):
+
+**Mac:**
+```bash
+cd ~/Documents
+git clone https://github.com/YOUR-GITHUB-USERNAME/AI-Training-Personal-Finance.git
+cd AI\ Training\ Personal\ Finance
+```
+
+**Windows:**
+```powershell
+cd %USERPROFILE%\Documents
+git clone https://github.com/YOUR-GITHUB-USERNAME/AI-Training-Personal-Finance.git
+cd "AI Training Personal Finance"
+```
+
+Note: Replace `YOUR-GITHUB-USERNAME` with the actual GitHub username where this project is stored. If you don't have a GitHub URL, download the project as a ZIP file and extract it to your Documents folder.
+
+#### 4. Verify Everything Works
+
+Check that files downloaded correctly:
+
+**Mac:**
+```bash
+ls
+```
+
+**Windows:**
+```powershell
+dir
+```
+
+Success: You should see folders including `.claude`, `data`, and files like `README.md` and `TUTORIAL.md`.
+
+Check that agents are present:
+
+**Mac/Windows:**
+```bash
+ls .claude/agents
+```
+
+Success: You should see files like `spending-analyzer.md`, `cashflow-analyst.md`, etc.
+
+Tip: For detailed beginner-friendly instructions with screenshots and troubleshooting, see the **"Setup Instructions for Beginners"** section in [TUTORIAL.md](TUTORIAL.md).
+
 ### 5-Minute Demo
 
-1. **Open Claude Code** in this directory
+Once you've completed the First Time Setup above, try this quick demonstration:
 
-2. **Verify the setup**:
+1. **Make sure you're in the project directory**
+
+   **Mac:**
+   ```bash
+   pwd
+   ```
+   Should show: `/Users/YourName/Documents/AI Training Personal Finance`
+
+   **Windows:**
+   ```powershell
+   cd
+   ```
+   Should show: `C:\Users\YourName\Documents\AI Training Personal Finance`
+
+   Note: If you're not in the right location, navigate back using the commands in Step 3 of First Time Setup.
+
+2. **Start Claude Code** in this directory:
+
+   ```bash
+   claude
+   ```
+
+   Success: You'll see a welcome message and a prompt (>).
+
+3. **Verify the setup** by checking all files are present:
    ```
    @document-checker verify all files are present
    ```
 
-3. **Run your first analysis**:
+   Success: The agent will confirm all 75 financial documents are present.
+
+4. **Run your first analysis** - analyze January spending patterns:
    ```
    @spending-analyzer analyze January 2024 spending
    ```
 
-4. **See the power**:
+   Success: You'll see a detailed breakdown of all spending by category!
+
+5. **See the power** - evaluate overall budget health:
    ```
    @budget-monitor evaluate budget health
    ```
 
+   Success: The agent will analyze spending against the 50/30/20 budgeting rule.
+
 That's it! You just performed financial analysis that would typically take hours.
+
+Tip: You can ask follow-up questions like "What percentage of income goes to gambling?" or "Which month had the highest spending?"
+
+Note: For complete beginner instructions including how to open Terminal/PowerShell, navigate folders, and detailed troubleshooting, see [TUTORIAL.md](TUTORIAL.md) - "Setup Instructions for Beginners".
 
 ## 📚 Project Structure
 
@@ -243,20 +352,125 @@ Recommendations:
 
 ## 🛠️ Troubleshooting
 
+### "Command not found: claude"
+
+**Mac Users:**
+- Verify Claude Code is installed: Open Terminal and type `claude --version`
+- If not installed, download from https://claude.ai/code
+- After installing, close and reopen Terminal
+- Try running the command again
+
+**Windows Users:**
+- Verify Claude Code is installed: Open PowerShell and type `claude --version`
+- If not installed, download from https://claude.ai/code
+- After installing, close and reopen PowerShell
+- If still not working, try running PowerShell as Administrator (right-click > "Run as Administrator")
+
 ### "Agent not found"
-- Ensure you're in the project directory
-- Verify `.claude/agents/[agent-name].md` exists
-- Try `ls .claude/agents/` to see available agents
+
+**Solution:**
+- Make sure you're in the correct project directory
+  - Mac: Type `pwd` to check your location
+  - Windows: Type `cd` to check your location
+- Verify the agents folder exists: `ls .claude/agents/`
+- Check you typed the agent name correctly (case-sensitive!)
+- Make sure you're using the `@` symbol before the agent name
+
+Note: Agent names use hyphens, not spaces: `@spending-analyzer` not `@spending analyzer`
 
 ### "Cannot read PDF files"
-- Verify PDFs exist: `find data/bobandjanedoe/statements -name "*.pdf" | wc -l` (should show 75)
+
+**Mac Users:**
+```bash
+ls data/bobandjanedoe/statements/checking/ | wc -l
+```
+Should show 12 files (12 monthly statements).
+
+**Windows Users:**
+```powershell
+dir data\bobandjanedoe\statements\checking\
+```
+Should show 12 PDF files.
+
+**If files are missing:**
+- The download may have been incomplete
+- Try cloning the repository again
+- Check that Git downloaded all files (large repos sometimes have issues)
 - Try opening a PDF manually to ensure they're not corrupted
-- Regenerate if needed using Python scripts in `data/bobandjanedoe/`
+
+### "Permission denied" or "Access denied"
+
+**Mac Users:**
+- You may need to grant Terminal permission to access files
+- Go to **System Preferences > Security & Privacy > Privacy > Files and Folders**
+- Ensure Terminal has necessary permissions
+- Try using `sudo` before the command (will prompt for your password)
+
+**Windows Users:**
+- You may need to run PowerShell as Administrator
+- Right-click on PowerShell and select **"Run as Administrator"**
+- Navigate back to the project folder and try again
+- Check that the files aren't marked as "Read Only"
 
 ### "Agent gives generic responses"
+
+**Solution:**
 - Be more specific in your questions
-- Reference specific months or documents
-- Ask for numerical analysis rather than general observations
+- Reference specific months or documents: "analyze January 2024" not just "analyze"
+- Ask for numerical analysis: "calculate total gambling expenses" not "tell me about gambling"
+- Ask follow-up questions to dig deeper
+- Make sure you're asking the right agent for the task
+
+Tip: Different agents have different specialties. Use `@spending-analyzer` for spending questions, `@cashflow-analyst` for balance questions, etc.
+
+### Wrong directory / "No such file or directory"
+
+**Mac Users:**
+```bash
+# Check where you are
+pwd
+
+# Navigate to your home directory
+cd ~
+
+# Navigate to Documents
+cd Documents
+
+# Navigate to project (use backslashes before spaces)
+cd AI\ Training\ Personal\ Finance
+
+# Verify you're in the right place
+pwd
+ls
+```
+
+**Windows Users:**
+```powershell
+# Check where you are
+cd
+
+# Navigate to Documents
+cd %USERPROFILE%\Documents
+
+# Navigate to project (use quotes around names with spaces)
+cd "AI Training Personal Finance"
+
+# Verify you're in the right place
+cd
+dir
+```
+
+Success: You should see `.claude`, `data`, `README.md`, and `TUTORIAL.md` when you list files.
+
+### Still stuck?
+
+Note: For complete beginner-friendly troubleshooting with detailed explanations, see the **"Setup Instructions for Beginners"** section in [TUTORIAL.md](TUTORIAL.md).
+
+When asking for help, include:
+- Your operating system (Mac or Windows)
+- The exact command you typed
+- The exact error message you received
+- What directory you're in (output of `pwd` on Mac or `cd` on Windows)
 
 ## 📦 Dependencies
 
