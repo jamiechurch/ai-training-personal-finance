@@ -22,9 +22,8 @@ Thumbs.db
 *.swp
 *.swo
 
-# Data - reference external repo instead of committing large PDFs
-data/bobandjanedoe/statements/**/*.pdf
-data/bobandjanedoe/.git/
+# Data - exclude all data files
+data/
 
 # Temporary files
 *.log

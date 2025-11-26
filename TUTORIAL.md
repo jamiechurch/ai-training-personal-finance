@@ -35,6 +35,8 @@ git clone https://github.com/YOUR-USERNAME/AI-Training-Personal-Finance.git
 cd "AI Training Personal Finance"
 ```
 
+**Note:** Sample data is optional for learning. You can use your own financial documents, or see [DATA.md](DATA.md) to download practice data.
+
 ### Run Your First Analysis (12 minutes)
 
 Start Claude Code:
@@ -570,6 +572,8 @@ ls .claude/agents
 
 Should see 8 `.md` files (the agents)
 
+**Optional:** Want sample data for practice? See [DATA.md](DATA.md) for download instructions. You can also use your own financial documents in the `data/` folder.
+
 **5. Start Analyzing**
 
 Launch Claude Code:
@@ -601,9 +605,9 @@ Run your first agent:
 - Or: `cd %USERPROFILE%\Documents\"AI Training Personal Finance"` (Windows)
 
 **"Cannot read PDF files"**
-- Verify files exist: `ls data/bobandjanedoe/statements/checking/`
-- Should show 12 PDF files
-- If missing: Re-clone the repository
+- You need financial documents to analyze
+- Use your own PDFs in the `data/` folder, OR
+- Download sample data - see [DATA.md](DATA.md) for instructions
 
 **"Permission denied"**
 - Mac: Grant Terminal permissions in System Preferences > Security & Privacy
@@ -616,12 +620,11 @@ Run your first agent:
 **Documentation:**
 - Claude Code Docs: https://claude.ai/code/docs
 - Agent Definitions: `.claude/agents/` directory
-- Sample Data: `data/bobandjanedoe/` directory
+- Sample Data: See [DATA.md](DATA.md) for optional download
 
 **Project Files:**
 - Agent definitions: `.claude/agents/*.md`
-- Financial data: `data/bobandjanedoe/statements/`
-- Data generators: `data/bobandjanedoe/generate_*.py`
+- Your financial data: Add to `data/` folder (or download samples)
 
 **Next Steps:**
 1. Complete the main exercise (Part 3)
@@ -632,22 +635,16 @@ Run your first agent:
 
 ---
 
-## About the Sample Data
+## About the Data
 
-**Bob & Jane Doe** (fictional couple)
-- Bob: 47, Security Guard, $95K/year
-- Jane: 45, Teacher, $65K/year
-- Location: Nashville, TN
-- Combined Income: $160K/year
+**Using Your Own Data:**
+The agents work with any financial PDFs - bank statements, credit card statements, tax returns, utility bills, etc. Simply add your documents to the `data/` folder and start analyzing.
 
-**75 Realistic Financial Documents:**
-- 12 checking statements (all of 2024)
-- 12 savings statements (all of 2024)
-- 2 retirement accounts (Bob's 401k, Jane's 403b)
-- 1 tax return (2023 Form 1040)
-- 48 utility bills (4 utilities × 12 months)
-
-All data is entirely fictional and generated for educational purposes.
+**Optional Sample Data:**
+Want to practice first? See [DATA.md](DATA.md) to download the "Bob & Jane Doe" sample dataset:
+- 75 realistic financial documents covering a full year
+- Entirely fictional and generated for educational purposes
+- Great for learning before analyzing your own finances
 
 ---
 

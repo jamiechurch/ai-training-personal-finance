@@ -27,6 +27,8 @@ cd "AI Training Personal Finance"
 claude
 ```
 
+**Optional:** Want sample data to practice with? See [DATA.md](DATA.md) for download instructions.
+
 ### Step 3: Run Your First Analysis
 ```
 @spending-analyzer analyze January 2024 spending
@@ -109,30 +111,25 @@ Notable Patterns:
 - Make sure you typed `@agent-name` with the `@` symbol
 
 ### "Cannot read PDF files"
-- Verify files exist: `ls data/bobandjanedoe/statements/checking/`
-- Should see 12 PDF files (one per month)
-- If missing: Re-clone the repository
+- You need financial documents to analyze
+- Use your own PDFs in the `data/` folder, OR
+- Download sample data - see [DATA.md](DATA.md) for instructions
 
 → **More help?** See [TUTORIAL.md - Advanced Topics](TUTORIAL.md#part-5-advanced-topics)
 
 ---
 
-## 📦 The Sample Data
+## 📦 Using Your Own Data or Sample Data
 
-**Bob & Jane Doe** (fictional couple)
-- Bob: 47, Security Guard, $95K/year
-- Jane: 45, Teacher, $65K/year
-- Location: Nashville, TN
-- Combined Income: $160K/year
+**Want to try it with your own financial documents?**
+- Add your PDFs to the `data/` folder and start analyzing immediately
 
-**75 Realistic Financial Documents:**
-- 12 checking statements (2024)
-- 12 savings statements (2024)
-- 2 retirement accounts (401k, 403b)
-- 1 tax return (2023 Form 1040)
-- 48 utility bills (electric, gas, water, internet)
+**Want to practice with sample data first?**
+- See [DATA.md](DATA.md) for optional download of "Bob & Jane Doe" sample dataset
+- 75 realistic financial documents (statements, tax returns, utility bills)
+- Entirely fictional and generated for educational purposes
 
-All data is entirely fictional and generated for educational purposes.
+The agents work with any financial documents - use whatever fits your learning style.
 
 ---
 
